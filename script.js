@@ -26,6 +26,19 @@ function returnMovies(url) {
             div_card.appendChild(title);
             div_column.appendChild(div_card);
             div_row.appendChild(div_column);
+            main.appendChild(div_row);
         });
     });
 }
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    main.innerHTML = '';
+
+    const searchItem = search.ariaValueMax;
+
+    if (searchItem) {
+        returnMovies(SEARCHAPI + searchItem);
+        search.value = '';
+    }
+})
