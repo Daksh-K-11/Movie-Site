@@ -2,10 +2,10 @@
 *.asp
 *.cer
 *.csr
-*.css
+# *.css
 *.htm
-*.html
-*.js
+# *.html
+# *.js
 *.jsp
 *.php
 *.rss
