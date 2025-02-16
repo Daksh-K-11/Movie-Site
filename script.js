@@ -13,11 +13,23 @@ function returnMovies(url) {
         console.log(data.results);
         data.result.forEach(element => {
             const div_card = document.createElement('div');
+            div_card.setAttribute('class', 'card');
+
             const div_row = document.createElement('div');
+            div_card.setAttribute('class', 'row');
+            
             const div_column = document.createElement('div');
+            div_card.setAttribute('class', 'column');
+            
             const image = document.createElement('image');
+            div_card.setAttribute('class', 'thumbnail');
+            div_card.setAttribute('id', 'image');
+            
             const title = document.createElement('h3');
+            div_card.setAttribute('id', 'title');
+            
             const center = document.createElement('center');
+            // div_card.setAttribute('class', 'card');
 
             title.innerHTML = `${element.title}`;
             image.src = IMG_PATH + element.poster_path;
